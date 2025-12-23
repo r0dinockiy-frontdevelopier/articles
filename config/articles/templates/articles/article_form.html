@@ -1,3 +1,8 @@
+{% extends 'articles/base.html' %}
+
+{% block title %}Статья{% endblock %}
+
+{% block content %}
 <h1>Статья</h1>
 
 <form method="post">
@@ -6,4 +11,6 @@
     <button type="submit">Сохранить</button>
 </form>
 
-<a href="/articles">Назад</a>
+<br>
+<a href="/articles">← Назад к списку</a>
+{% endblock %}

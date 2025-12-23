@@ -1,11 +1,21 @@
-<h1>Статьи</h1>
-<a href="/articles/create">Создать</a>
+{% extends 'articles/base.html' %}
 
-<ul>
+{% block title %}Статьи{% endblock %}
+
+{% block content %}
+<h1>Статьи</h1>
+
+<a class="top-link" href="/articles/create">➕ Создать статью</a>
+
 {% for article in articles %}
-    <li>
-        {{ article.title }}
-        <a href="/articles/{{ article.id }}/edit">Редактировать</a>
-    </li>
+    <div class="article">
+        <strong>{{ article.title }}</strong><br>
+        <div class="actions">
+            <a href="/articles/{{ article.id }}/edit">Редактировать</a>
+        </div>
+    </div>
+{% empty %}
+    <p>Статей пока нет.</p>
 {% endfor %}
-</ul>
+
+{% endblock %}
