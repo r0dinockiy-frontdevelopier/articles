@@ -1,0 +1,11 @@
+<h1>Статьи</h1>
+<a href="/articles/create">Создать</a>
+
+<ul>
+{% for article in articles %}
+    <li>
+        {{ article.title }}
+        <a href="/articles/{{ article.id }}/edit">Редактировать</a>
+    </li>
+{% endfor %}
+</ul>
