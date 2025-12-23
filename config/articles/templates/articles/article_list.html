@@ -11,7 +11,8 @@
     <div class="article">
         <strong>{{ article.title }}</strong><br>
         <div class="actions">
-            <a href="/articles/{{ article.id }}/edit">Редактировать</a>
+            <a href="/articles/{{ article.id }}/edit">Редактировать</a> |
+            <a href="/articles/{{ article.id }}/delete">Удалить</a>
         </div>
     </div>
 {% empty %}
